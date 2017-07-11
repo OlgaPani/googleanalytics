@@ -14,7 +14,11 @@
         ga('create', 'UA-XXXXXX-X', 'auto');
         ga('set', 'anonymizeIp', true);
         ga('set', 'dimension1', 'internal');
-        ga('send', 'pageview');
+        ga('send', 'pageview', {
+            'hitCallback': function() {
+            window.location.href = '/';
+            } 
+        });
         //]]>
     </script>
 
